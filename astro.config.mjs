@@ -1,9 +1,8 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import cloudflare from "@astrojs/cloudflare";
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,10 +10,11 @@ export default defineConfig({
   adapter: cloudflare({
     platformProxy: {
       enabled: true
-    }
+    },
+    imageService: "cloudflare"
   }),
   image: {
-    service: { entrypoint: 'astro/assets/services/noop' }
+    service: passthroughImageService()
   },
-  integrations: [react(), tailwind(), partytown()]
+  integrations: [react(), tailwind()]
 });

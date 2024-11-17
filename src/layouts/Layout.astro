@@ -35,7 +35,7 @@ const {
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charSet="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -70,15 +70,15 @@ const {
       initLayout()
     </script>
   </head>
-  <body class="min-h-screen bg-background font-sans antialiased">
-    <div class="flex min-h-screen">
+  <body className="min-h-screen bg-background font-sans antialiased">
+    <div className="flex min-h-screen">
       <Sidebar 
         navigation={navigation} 
-        client:load 
+        client:load
       />
       
-      <div id="main-content" class="flex-1">
-        <main class="py-6">
+      <div id="main-content" className="flex-1">
+        <main className="py-6">
           <slot />
         </main>
       </div>

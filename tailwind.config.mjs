@@ -88,6 +88,7 @@ export default {
 	plugins: [
 		require("tailwindcss-animate"),
 		require("@tailwindcss/typography"),
-		require("@assistant-ui/react/tailwindcss")
+		require("@assistant-ui/react/tailwindcss"),
+		require("@assistant-ui/react/tailwindcss")({ shadcn: true })
 	],
 }

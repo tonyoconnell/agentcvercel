@@ -1,0 +1,106 @@
+
+> one@0.0.1 astro /Users/toc/Server/ONE/local/one
+> astro "build" "--verbose"
+
+2024-11-17T16:56:20.239Z astro:cli --verbose flag enabled! Enabling: DEBUG="astro:*,vite:*"
+2024-11-17T16:56:20.240Z astro:cli Tip: Set the DEBUG env variable directly for more control. Example: "DEBUG=astro:*,vite:* astro build".
+2024-11-17T16:56:20.543Z astro:telemetry [notify] last notified on 1703258365129
+2024-11-17T16:56:21.336Z astro:telemetry {
+  context: {
+    isGit: true,
+    anonymousProjectId: 'dd31b6faf8a51b76d8cabcfa2444b473083d44a11652781fdd1097b53408c133',
+    packageManager: 'pnpm',
+    packageManagerVersion: '9.4.0',
+    anonymousId: '7fbe4ead319b28ce06e2cb5259019576adc55f7b73fcfbed66f536426f2722a5',
+    anonymousSessionId: '70aaf41e38f9d9ee6af14d2925a1248e5ddb67b6912845ef9377409502812f76'
+  },
+  meta: {
+    nodeVersion: '20.17.0',
+    viteVersion: '6.0.0-beta.6',
+    astroVersion: '5.0.0-beta.8',
+    systemPlatform: 'darwin',
+    systemRelease: '24.1.0',
+    systemArchitecture: 'arm64',
+    cpuCount: 8,
+    cpuModel: 'Apple M1',
+    cpuSpeed: 2400,
+    memoryInMb: 8192,
+    isDocker: false,
+    isTTY: undefined,
+    isWSL: false,
+    isCI: false,
+    ciName: null
+  }
+}
+2024-11-17T16:56:21.336Z astro:telemetry [
+  {
+    "eventName": "ASTRO_CLI_SESSION_STARTED",
+    "payload": {
+      "cliCommand": "build",
+      "config": {
+        "adapter": "@astrojs/cloudflare",
+        "integrations": [
+          "@astrojs/react",
+          "@astrojs/tailwind",
+          "@astrojs/partytown"
+        ],
+        "build": {},
+        "server": true,
+        "image": {},
+        "markdown": {},
+        "experimental": {},
+        "legacy": {}
+      }
+    }
+  }
+]
+2024-11-17T16:56:21.341Z astro:build Initial setup...
+2024-11-17T16:56:21.341Z astro:middleware The integration @astrojs/cloudflare has added middleware that runs before any application middleware you define.
+2024-11-17T16:56:21.373Z astro:telemetry {
+  context: {
+    isGit: true,
+    anonymousProjectId: 'dd31b6faf8a51b76d8cabcfa2444b473083d44a11652781fdd1097b53408c133',
+    packageManager: 'pnpm',
+    packageManagerVersion: '9.4.0',
+    anonymousId: '7fbe4ead319b28ce06e2cb5259019576adc55f7b73fcfbed66f536426f2722a5',
+    anonymousSessionId: '70aaf41e38f9d9ee6af14d2925a1248e5ddb67b6912845ef9377409502812f76'
+  },
+  meta: {
+    nodeVersion: '20.17.0',
+    viteVersion: '6.0.0-beta.6',
+    astroVersion: '5.0.0-beta.8',
+    systemPlatform: 'darwin',
+    systemRelease: '24.1.0',
+    systemArchitecture: 'arm64',
+    cpuCount: 8,
+    cpuModel: 'Apple M1',
+    cpuSpeed: 2400,
+    memoryInMb: 8192,
+    isDocker: false,
+    isTTY: undefined,
+    isWSL: false,
+    isCI: false,
+    ciName: null
+  }
+}
+2024-11-17T16:56:21.374Z astro:telemetry [
+  {
+    "eventName": "ASTRO_CLI_ERROR",
+    "payload": {
+      "name": "TypeError",
+      "cliCommand": "build",
+      "isFatal": true,
+      "anonymousMessageHint": "Cannot read properti"
+    }
+  }
+]
+Cannot read properties of undefined (reading 'startsWith')
+  Location:
+    /Users/toc/Server/ONE/local/one/node_modules/.pnpm/@astrojs+internal-helpers@0.4.1/node_modules/@astrojs/internal-helpers/dist/path.js:17:15
+  Stack trace:
+    at removeLeadingForwardSlash (file:///Users/toc/Server/ONE/local/one/node_modules/.pnpm/@astrojs+internal-helpers@0.4.1/node_modules/@astrojs/internal-helpers/dist/path.js:17:15)
+    at injectImageEndpoint (file:///Users/toc/Server/ONE/local/one/node_modules/.pnpm/astro@5.0.0-beta.8_@types+node@22.9.0_jiti@1.21.6_rollup@4.27.2_typescript@5.6.3_yaml@2.6.0/node_modules/astro/dist/assets/endpoint/config.js:8:24)
+    at async AstroBuilder.run (file:///Users/toc/Server/ONE/local/one/node_modules/.pnpm/astro@5.0.0-beta.8_@types+node@22.9.0_jiti@1.21.6_rollup@4.27.2_typescript@5.6.3_yaml@2.6.0/node_modules/astro/dist/core/build/index.js:181:23)
+    at async build (file:///Users/toc/Server/ONE/local/one/node_modules/.pnpm/astro@5.0.0-beta.8_@types+node@22.9.0_jiti@1.21.6_rollup@4.27.2_typescript@5.6.3_yaml@2.6.0/node_modules/astro/dist/cli/build/index.js:29:3)
+    at async cli (file:///Users/toc/Server/ONE/local/one/node_modules/.pnpm/astro@5.0.0-beta.8_@types+node@22.9.0_jiti@1.21.6_rollup@4.27.2_typescript@5.6.3_yaml@2.6.0/node_modules/astro/dist/cli/index.js:175:5)
+ ELIFECYCLE  Command failed with exit code 1.

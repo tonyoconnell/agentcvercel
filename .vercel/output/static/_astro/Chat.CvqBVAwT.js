@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime._qNxob7_.js";import{u as e,t as i}from"./thread.Co-DP7xE.js";import"./index.DWKhlr8t.js";import"./index.DrJg9Js7.js";import"./index.Cy6fXh2N.js";const n=({className:a=""})=>{const r=e({api:"/api/chat/openai-gpt4"});return t.jsx("div",{className:`h-full ${a}`,children:t.jsx(i,{runtime:r})})};export{n as default};

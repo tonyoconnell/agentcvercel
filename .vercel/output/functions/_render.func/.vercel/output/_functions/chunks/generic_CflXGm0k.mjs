@@ -1,5 +1,5 @@
 import { i as isRemotePath, j as joinPaths } from './path_CVKLlyuj.mjs';
-import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, j as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, k as UnsupportedImageConversion, l as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, n as ExpectedImageOptions, o as ExpectedNotESMImage, p as InvalidImageService, c as createComponent, b as createAstro, q as ImageMissingAlt, r as renderTemplate, m as maybeRenderHead, h as addAttribute, s as spreadAttributes } from './astro/server_B_KtmydP.mjs';
+import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, j as UnsupportedImageConversion, k as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, l as ExpectedImageOptions, n as ExpectedNotESMImage, o as InvalidImageService, c as createComponent, b as createAstro, p as ImageMissingAlt, r as renderTemplate, m as maybeRenderHead, h as addAttribute, s as spreadAttributes } from './astro/server_ecZQj7dM.mjs';
 import 'clsx';
 import '../renderers.mjs';
 
@@ -80,14 +80,8 @@ function isLocalService(service) {
   }
   return "transform" in service;
 }
-function parseQuality(quality) {
-  let result = parseInt(quality);
-  if (Number.isNaN(result)) {
-    return quality;
-  }
-  return result;
-}
 const baseService = {
+  propertiesToHash: DEFAULT_HASH_PROPS,
   validateOptions(options) {
     if (!options.src || typeof options.src !== "string" && typeof options.src !== "object") {
       throw new AstroError({
@@ -1113,7 +1107,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_uVSgQz82.mjs'
+      './build-service_Cbd4N633.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1724,7 +1718,7 @@ const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   })} <img${addAttribute(fallbackImage.src, "src")}${spreadAttributes(imgAdditionalAttributes)}${spreadAttributes(fallbackImage.attributes)}> </picture>`;
 }, "/Users/toc/Server/ONE/local/one/node_modules/.pnpm/astro@5.0.0-beta.8_@types+node@22.9.0_jiti@1.21.6_rollup@4.27.2_typescript@5.6.3_yaml@2.6.0/node_modules/astro/components/Picture.astro", void 0);
 
-const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"astro/assets/services/sharp","config":{}},"domains":[],"remotePatterns":[]};
+const imageConfig = {"endpoint":{"route":"/_image"},"service":{"entrypoint":"@astrojs/vercel/build-image-service","config":{"sizes":[640,750,828,1080,1200,1920,2048,3840],"domains":[],"remotePatterns":[]}},"domains":[],"remotePatterns":[]};
 					const getImage = async (options) => await getImage$1(options, imageConfig);
 
 const fnv1a52 = (str) => {
@@ -1814,4 +1808,4 @@ const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 
 const page = () => _page;
 
-export { page as a, baseService as b, parseQuality as p };
+export { baseService as b, page as p };

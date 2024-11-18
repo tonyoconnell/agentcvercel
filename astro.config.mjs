@@ -11,7 +11,8 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-    maxDuration: 8
+    maxDuration: 8,
+    imageService: true
   }),
   integrations: [react(), tailwind()]
 });
